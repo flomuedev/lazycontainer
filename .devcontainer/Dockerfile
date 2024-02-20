@@ -24,9 +24,9 @@ RUN install2.r --error --skipinstalled -n -1 \
         ottr \
         zoo \
     && rm -rf /tmp/downloaded_packages \
-    && R -q -e 'remotes::install_github("https://github.com/rapporter/pander")' \
-	&& R -q -e 'remotes::install_github("https://github.com/dcomtois/summarytools", build_vignettes = TRUE")' \
-    && R -q -e 'remotes::install_github("https://github.com/flomuedev/lazyhci")'
+    && R -q -e 'remotes::install_github("rapporter/pander")' \
+	&& R -q -e 'remotes::install_github("dcomtois/summarytools")' \
+    && R -q -e 'remotes::install_github("flomuedev/lazyhci")'
 
 # Install Python packages
 COPY requirements.txt /tmp/pip-tmp/
